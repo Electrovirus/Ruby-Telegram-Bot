@@ -1,10 +1,10 @@
 {
-    "BotName"    :    "TOFIKOWAR",
-    "tofiko"    :    "التوكن هنا",
-    "Version"    :    "v 2.1",
-    "Devlopers" 	:	[117331455],
-    "Groups"	:	[-1001024787932],
-    "Admins"	: [117331455,34235668,111940001,107434774],
+    "BotName"    :    "put your bot name here",
+    "tofiko"    :    "put your token here",
+    "Version"    :    "v 1",
+    "Devlopers" 	:	[put your id here],
+    "Groups"	:	[put a supegroup id here],
+    "Admins"	: [put admin id here],
     "bban"	:	[]
 
 }
