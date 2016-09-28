@@ -19,7 +19,7 @@ require 'securerandom'
 db = YAML::Store.new('Game.yml')
 bd = YAML::Store.new('band.yml')
 #bot token
-token = @config["tofiko"]
+token = @config["electrovirus"]
 
 V = @config["Version"]
 
@@ -41,4 +41,3 @@ Telegram::Bot::Client.run(token) do |bot|
 end
 
 #TELEGRAM_BOT_POOL_SIZE=16 ruby bot.rb
-# tofiko
