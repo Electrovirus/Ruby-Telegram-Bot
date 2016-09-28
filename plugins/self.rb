@@ -1,4 +1,4 @@
-## by tofiko @liiiiiiiil
+
 #Encoding: UTF-8
 
  if @config["Devlopers"].include?(message.from.id)
@@ -14,9 +14,9 @@
 	end
  end
   s_tofiko = "Please do not send stickers🐼❎"
- h_tofiko = "  ممنوع ارسال الروابط❌"
+ h_tofiko = "Please do not send links🐼❎"
   v_tofiko = "Please do not send videos🐼❎"
-  w_tofiko =  "اهلا بك \n  تابع @mtofee" 
+  w_tofiko =  "Hi welcome🐼☑" 
 if @config["Admins"].include?(message.from.id)
 	
 	if message.text == "/id" 
@@ -36,7 +36,7 @@ if  !bd[message.from.id] && !@config["bban"].include?(message.from.id)
 if message.text.to_s.include?"http" 
     bot.api.send_message(chat_id: message.chat.id, text: h_tofiko)
 end
-if  message.text == "!طرد" && message.reply_to_message && @config["Admins"].include?(message.from.id)
+if  message.text == "/kick" && message.reply_to_message && @config["Admins"].include?(message.from.id)
     bot.api.kickChatMember(chat_id: message.chat.id, user_id: message.reply_to_message.from.id)
     bot.api.send_message(chat_id: message.chat.id, text: "Kicked from the group🔴" )
 end
@@ -45,7 +45,7 @@ case message.text
 
   when "/start"
 if db[message.from.id]
-      bot.api.send_message(chat_id: message.chat.id, text: " Hi welcome to my ruby bot🌎" )
+      bot.api.send_message(chat_id: message.chat.id, text: " Hi welcome to my ruby bot🌎\nBot started🔊" )
     else
 			db[message.from.id] = {
 				"username"=>message.from.username,
@@ -68,13 +68,13 @@ end
   end
     if message.text.to_s.include?("http")
     bot.api.kickChatMember(chat_id: message.chat.id, user_id: message.from.id)
-    bot.api.send_message(chat_id: message.chat.id, text: "Kicked from the group" )
+    bot.api.send_message(chat_id: message.chat.id, text: "Kicked from the group🔴" )
     end
-    if message
-    	bot.api.send_message(chat_id: message.chat.id, text : "قناتي https://telegram.me/joinchat/Bv5V_0EOlVkxaj7lNNqGFg")
+    if message.text == "/stop" && db[message.from.id] && message.reply_to_message && db[message.reply_to_message.from.id]
+    	bot.api.send_message(chat_id: message.chat.id, text : "Bot has been stopped🔇")
 if message.text == "/he" && db[message.from.id] && message.reply_to_message && db[message.reply_to_message.from.id]
-		bot.api.send_message(chat_id: message.chat.id, text: "معرفه: @#{message.reply_to_message.from.username} \n الاسم الاول: #{message.reply_to_message.from.first_name} \nالاسم الاخير: #{message.reply_to_message.from.last_name}\n ")
+		bot.api.send_message(chat_id: message.chat.id, text: "Username: @#{message.reply_to_message.from.username} \n Firstname: #{message.reply_to_message.from.first_name} \nLastname: #{message.reply_to_message.from.last_name}\n ")
 end
 end 
 end
-## by tofiko @liiiiiiiil
+
